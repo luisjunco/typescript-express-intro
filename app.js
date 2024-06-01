@@ -6,17 +6,9 @@ require('dotenv').config();
 const app = express();
 
 
-// GET /
-app.get('/', (req, res) => {
-    res.json({ message: 'all good in here' });
-});
-
-
-// GET /hello
-app.get('/hello', (req, res) => {
-    res.json({ message: 'hello world' });
-});
-
+// Import routes
+const allRoutes = require("./routes");
+app.use("/api", allRoutes);
 
 
 const PORT = process.env.PORT || 5000;
