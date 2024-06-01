@@ -8,7 +8,7 @@ const app = express();
 
 // Import routes
 const allRoutes = require("./routes");
-app.use("/api", allRoutes);
+app.use("/", allRoutes);
 
 
 const PORT = process.env.PORT || 5000;
